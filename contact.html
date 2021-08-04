@@ -109,12 +109,17 @@
         </div>
         <div class="col-lg border rounded-4 facebook-blue-bg white py-5">
           <!--form-->
-          <form action="" class="row g-3">
+          <form
+            action="https://formsubmit.co/chope.noreply@gmail.com"
+            method="POST"
+            class="row g-3"
+          >
             <div class="col-md-6 mb-3">
               <label for="email" class="form-label">Email</label>
               <input
                 type="email"
                 id="email"
+                name="email"
                 class="form-control"
                 placeholder="example@chope.com"
                 required
@@ -123,8 +128,8 @@
             <div class="col-md-6 mb-3">
               <label for="department" class="form-label">Department</label>
               <select
-                name="department"
                 id="department"
+                name="department"
                 class="form-control"
                 required
               >
@@ -139,6 +144,7 @@
               <input
                 type="text"
                 id="subject"
+                name="_subject"
                 class="form-control"
                 placeholder="My dog ate my homework"
                 required
@@ -149,6 +155,7 @@
               <textarea
                 name="message"
                 id="message"
+                name="message"
                 class="form-control"
                 rows="5"
                 required
