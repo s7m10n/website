@@ -42,26 +42,26 @@ function status(bool, department) {
     case "Finance":
       if (bool) {
         document.getElementById("availableFinance").innerHTML =
-          '<img src="img/check.svg" alt="Is available" />';
+          '<img src="img/check.svg" alt="Is available" height="32"/>';
       } else {
         document.getElementById("availableFinance").innerHTML =
-          '<img src="img/x.svg" alt="Not available" />';
+          '<img src="img/x.svg" alt="Not available" height="32"/>';
       }
     case "Technology":
       if (bool) {
         document.getElementById("availableTechnology").innerHTML =
-          '<img src="img/check.svg" alt="Is available" />';
+          '<img src="img/check.svg" alt="Is available" height="32"/>';
       } else {
         document.getElementById("availableTechnology").innerHTML =
-          '<img src="img/x.svg" alt="Not available" />';
+          '<img src="img/x.svg" alt="Not available" height="32"/>';
       }
     case "Marketing":
       if (bool) {
         document.getElementById("availableMarketing").innerHTML =
-          '<img src="img/check.svg" alt="Is available" />';
+          '<img src="img/check.svg" alt="Is available" height="32"/>';
       } else {
         document.getElementById("availableMarketing").innerHTML =
-          '<img src="img/x.svg" alt="Not available" />';
+          '<img src="img/x.svg" alt="Not available" height="32"/>';
       }
   }
 }
