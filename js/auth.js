@@ -10,25 +10,20 @@ if (page == "register.html") {
     const email = document.getElementById("registerEmail").value;
     const password = document.getElementById("registerPassword").value;
 
-    auth
-      .createUserWithEmailAndPassword(email, password)
-      .then((cred) => {
-        return db
-          .collection("user-data")
-          .doc(cred.user.uid)
-          .set({
-            username: document.getElementById("registerUsername").value,
-            email: email,
-            cname: document.getElementById("registerCompanyName").value,
-            clevel: document.getElementById("registerCompanyLevel").value,
-            csize: document.getElementById("registerCompanySize").value,
-            bsector: document.getElementById("registerBusinessSector").value,
-            country: document.getElementById("registerCountry").value,
-          });
-      })
-      .then(() => {
-        console.log(cred.user);
-      });
+    auth.createUserWithEmailAndPassword(email, password).then((cred) => {
+      return db
+        .collection("user-data")
+        .doc(cred.user.uid)
+        .set({
+          username: document.getElementById("registerUsername").value,
+          email: email,
+          cname: document.getElementById("registerCompanyName").value,
+          clevel: document.getElementById("registerCompanyLevel").value,
+          csize: document.getElementById("registerCompanySize").value,
+          bsector: document.getElementById("registerBusinessSector").value,
+          country: document.getElementById("registerCountry").value,
+        });
+    });
   });
 }
 
