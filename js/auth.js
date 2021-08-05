@@ -55,6 +55,16 @@ auth.onAuthStateChanged((user) => {
     console.log("Active user", email);
     document.getElementById("navbar-nav").innerHTML +=
       '<a id="logoutLink" onclick="logout()" class="nav-link">log out</a>';
+
+    const docRef = db.collection("user-data").doc(user.uid);
+    docRef.get().then((doc) => {
+      const data = doc.data();
+      const username = data["username"];
+      document.getElementById("navbar-nav").innerHTML +=
+        '<span class="white text-decoration-underline align-self-center">username: ' +
+        username +
+        "<span>";
+    });
   } else {
     console.log("No user detected.");
   }
