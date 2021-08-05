@@ -1,20 +1,47 @@
+const page = window.location.pathname.split("/").pop();
+console.log(page);
+
 // register
-const registerForm = document.querySelector("#registerForm");
-registerForm.addEventListener("submit", (e) => {
-  // prevent page from refreshing upon submitting, as default action is to refresh
-  e.preventDefault();
+if (page == "register.html") {
+  const registerForm = document.querySelector("#registerForm");
+  registerForm.addEventListener("submit", (e) => {
+    e.preventDefault();
 
-  // get user info
-  const username = document.getElementById("registerUsername").value;
-  const email = document.getElementById("registerEmail").value;
-  const password = document.getElementById("registerPassword").value;
-  console.log(email, password, username);
+    const email = document.getElementById("registerEmail").value;
+    const password = document.getElementById("registerPassword").value;
 
-  // register user
-  auth.createUserWithEmailAndPassword(email, password).then((cred) => {
-    console.log(cred.user);
-    registerForm.reset();
+    auth.createUserWithEmailAndPassword(email, password).then((cred) => {
+      console.log(cred.user);
+    });
   });
-});
+}
+
+// login
+else if (page == "login.html") {
+  const loginForm = document.querySelector("#loginForm");
+  loginForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    const email = document.getElementById("loginEmail").value;
+    const password = document.getElementById("loginPassword").value;
+
+    auth.signInWithEmailAndPassword(email, password).then((cred) => {
+      console.log(cred.user);
+    });
+  });
+}
 
 // logout
+function logout() {
+  auth.signOut();
+  alert("Logged out successfully.");
+}
+
+auth.onAuthStateChanged((user) => {
+  if (user) {
+    var email = user.email;
+    console.log("Active user", email);
+  } else {
+    console.log("No user detected.");
+  }
+});

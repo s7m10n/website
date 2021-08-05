@@ -41,7 +41,7 @@
     <!--sign up-->
     <div class="container p-5 text-center mt-5 border facebook-blue-bg">
       <h1 class="mt-5 mb-5 white">Log in to Chope</h1>
-      <form action="" class="row p-5">
+      <form action="" id="loginForm" class="row p-5">
         <div class="col-md-4 card mb-5">
           <div class="card-body">
             <h5 class="card-title">account details</h5>
@@ -50,16 +50,16 @@
         </div>
         <div class="col-md-8">
           <input
-            type="text"
+            type="email"
             class="form-control mb-3"
-            id="clientUsername"
-            placeholder="username"
+            id="loginEmail"
+            placeholder="email"
             required
           />
           <input
-            type="text"
+            type="password"
             class="form-control mb-3"
-            id="clientPassword"
+            id="loginPassword"
             placeholder="password"
             required
           />
@@ -119,5 +119,6 @@
       integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
       crossorigin="anonymous"
     ></script>
+    <script src="js/auth.js"></script>
   </body>
 </html>
