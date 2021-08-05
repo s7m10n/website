@@ -46,12 +46,15 @@ else if (page == "login.html") {
 function logout() {
   auth.signOut();
   alert("Logged out successfully.");
+  location.reload();
 }
 
 auth.onAuthStateChanged((user) => {
   if (user) {
     var email = user.email;
     console.log("Active user", email);
+    document.getElementById("navbar-nav").innerHTML +=
+      '<a id="logoutLink" onclick="logout()" class="nav-link">log out</a>';
   } else {
     console.log("No user detected.");
   }

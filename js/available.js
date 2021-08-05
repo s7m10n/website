@@ -1,3 +1,4 @@
+// day time logic
 function checkFinance(day, time) {
   // check if day is saturday or sunday
   if (day == "Sun" || day == "Sat") {
@@ -86,3 +87,16 @@ console.log(time);
 console.log(availableFinance);
 console.log(availableTechnology);
 console.log(availableMarketing);
+
+// to check if user is logged in
+const form = document.getElementById("contactForm");
+document.getElementById("contactSubmit").addEventListener("click", () => {
+  auth.onAuthStateChanged((user) => {
+    if (user) {
+      form.submit();
+    } else {
+      alert("Please log in before sending an email.");
+      window.location.href("/login.html");
+    }
+  });
+});
