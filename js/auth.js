@@ -36,9 +36,16 @@ else if (page == "login.html") {
     const email = document.getElementById("loginEmail").value;
     const password = document.getElementById("loginPassword").value;
 
-    auth.signInWithEmailAndPassword(email, password).then((cred) => {
-      console.log(cred.user);
-    });
+    auth
+      .signInWithEmailAndPassword(email, password)
+      .then((cred) => {
+        console.log(cred.user);
+      })
+      .then(() => {
+        if (email == "admin@chope.com") {
+          window.location.replace("/admin.html");
+        }
+      });
   });
 }
 
@@ -46,7 +53,7 @@ else if (page == "login.html") {
 function logout() {
   auth.signOut();
   alert("Logged out successfully.");
-  location.reload();
+  window.location.replace("/index.html");
 }
 
 auth.onAuthStateChanged((user) => {
