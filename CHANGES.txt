@@ -1,6 +1,8 @@
 Author: Luth Andyka Bin Muhamad Hilmi
 Admin No: 210670B
 
+Also please use VSCode live server!!
+
 Way to check database:
 1. Go to login.html
 2. In the email input, enter: admin@chope.com
@@ -13,7 +15,7 @@ Way to check email:
 3. Password: Ch0peadminpassword
 4. There you can see the email sent in contact.html
 
-There is a .git folder attached. There is way to check the file history but I don't know how to do that, maybe you know how. There you can see what I specifically changed.
+There is a .git folder attached. You can also check https://github.com/s7m10n/website/commits/master
 Otherwise here is a list of things I did:
 
 1. init - i thought using git to record my progress would be wise so I transfered everything from the day of interview into this repository
