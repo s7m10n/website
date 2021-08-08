@@ -44,3 +44,12 @@ Otherwise here is a list of things I did:
 24. add plan header
 25. fix form bug - the bug was that it would still send an email even when you're not logged in. so i changed the button type to prevent the form from submitting
 26. icmal overhaul - while i was verbally describing how my website was, my friend told me that the english was horrible so, with a heavy heart, i changed it
+
+Resources: 
+https://uxwing.com/green-checkmark-icon/
+https://uxwing.com/red-x-icon/
+https://www.prudentpedal.com/much-professional-services-firm-spend-marketing/
+https://www.flaticon.com/free-icon/time_4149641?related_id=4149641
+https://www.flaticon.com/free-icon/man_3011270?term=person&page=1&position=22&page=1&position=22&related_id=3011270&origin=search
+https://www.flaticon.com/free-icon/team_1759348?term=team&page=1&position=37&page=1&position=37&related_id=1759348&origin=search
+https://www.flaticon.com/free-icon/buildings_3061341?term=enterprise&page=1&position=9&page=1&position=9&related_id=3061341&origin=search
