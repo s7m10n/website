@@ -1,0 +1,44 @@
+Author: Luth Andyka Bin Muhamad Hilmi
+Admin No: 210670B
+
+Way to check database:
+1. Go to login.html
+2. In the email input, enter: admin@chope.com
+3. In the password input, enter: adminpassword
+4. You will be redirected to a page the data already existing. You cannot delete the data but you can add by registering into a new account
+
+Way to check email:
+1. Sign into chope gmail
+2. Email: chope.noreply@gmail.com
+3. Password: Ch0peadminpassword
+4. There you can see the email sent in contact.html
+
+There is a .git folder attached. There is way to check the file history but I don't know how to do that, maybe you know how. There you can see what I specifically changed.
+Otherwise here is a list of things I did:
+
+1. init - i thought using git to record my progress would be wise so I transfered everything from the day of interview into this repository
+2. changed img size in contact.html
+3. create folder to organise contact.html scripts - this was later scrapped
+4. added send email feature - i used formsubmit.co to help with the emailing
+5. added register feature using firebase - started playing around with firebase and their sign in sign up functions, this would later be a challenge for maybe
+6. added log out link in nav - after loggin in user needs a way to logout
+7. add link to firebase in most html - this is so i can check if user is logged in in all pages
+8. revised register/login and add logout() - as mentioned from [5] I was having major issues with the register login function and decided to redo it completely
+9. add user data add() - this is to add user data into the firestore database
+10. bug fix and change button name - there was a console.log() somewhere causing issues so i rectified it
+11. add dynamix log out - added a way for the website to detect if you're logged in and show the option to log out that previously wasn't there
+12. show user at navbar - just a way to show the user that they are logged in
+13. fixed link redirect - instead of href i used replace as it worked better
+14. enhanced form layout
+15. cleaned up unused files
+16. add admin detect - a way for us to look into the database part 1
+17. admin data placeholder - i needed to see how bootstrap named their id and classes for the accordion to work part 2
+18. add .js to show database using firestore - created a js script to format the data and write into the page part 3
+19. poduct.hmtl overhaul - the previous design was quite basic so i decided to change it abit
+20. add footer
+21. clean admin.html - the page didn't need a footer
+22. fix layout - there was a problem where the right column would go below. lucklily i found a solution
+23. added caps and logo
+24. add plan header
+25. fix form bug - the bug was that it would still send an email even when you're not logged in. so i changed the button type to prevent the form from submitting
+26. icmal overhaul - while i was verbally describing how my website was, my friend told me that the english was horrible so, with a heavy heart, i changed it
