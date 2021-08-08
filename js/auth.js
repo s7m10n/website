@@ -10,20 +10,25 @@ if (page == "register.html") {
     const email = document.getElementById("registerEmail").value;
     const password = document.getElementById("registerPassword").value;
 
-    auth.createUserWithEmailAndPassword(email, password).then((cred) => {
-      return db
-        .collection("user-data")
-        .doc(cred.user.uid)
-        .set({
-          username: document.getElementById("registerUsername").value,
-          email: email,
-          cname: document.getElementById("registerCompanyName").value,
-          clevel: document.getElementById("registerCompanyLevel").value,
-          csize: document.getElementById("registerCompanySize").value,
-          bsector: document.getElementById("registerBusinessSector").value,
-          country: document.getElementById("registerCountry").value,
-        });
-    });
+    auth
+      .createUserWithEmailAndPassword(email, password)
+      .then((cred) => {
+        return db
+          .collection("user-data")
+          .doc(cred.user.uid)
+          .set({
+            username: document.getElementById("registerUsername").value,
+            email: email,
+            cname: document.getElementById("registerCompanyName").value,
+            clevel: document.getElementById("registerCompanyLevel").value,
+            csize: document.getElementById("registerCompanySize").value,
+            bsector: document.getElementById("registerBusinessSector").value,
+            country: document.getElementById("registerCountry").value,
+          });
+      })
+      .then(() => {
+        window.location.replace("/index.html");
+      });
   });
 }
 
@@ -61,7 +66,7 @@ auth.onAuthStateChanged((user) => {
     var email = user.email;
     console.log("Active user", email);
     document.getElementById("navbar-nav").innerHTML +=
-      '<a id="logoutLink" onclick="logout()" class="nav-link">log out</a>';
+      '<a id="logoutLink" onclick="logout()" class="nav-link">Log out</a>';
 
     const docRef = db.collection("user-data").doc(user.uid);
     docRef.get().then((doc) => {

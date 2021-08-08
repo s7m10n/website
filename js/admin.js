@@ -6,6 +6,7 @@ const userCollection = db
     snap.forEach((doc) => {
       const userData = doc.data();
       const username = userData["username"];
+      const email = userData["email"];
       const csize = userData["csize"];
       const country = userData["country"];
       const cname = userData["cname"];
@@ -37,6 +38,8 @@ const userCollection = db
         data-bs-parent="#userData"
     >
         <div class="accordion-body">
+            Username: ${username} <br>
+            Email: ${email} <br>
             Company Name: ${cname} <br>
             Company Size: ${csize} <br>
             Company Level: ${clevel} <br>
