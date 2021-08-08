@@ -1,7 +1,9 @@
 Author: Luth Andyka Bin Muhamad Hilmi
 Admin No: 210670B
 
+**************************************
 Also please use VSCode live server!!
+**************************************
 
 Way to check database:
 1. Go to login.html
