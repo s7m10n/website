@@ -96,7 +96,7 @@ document.getElementById("contactSubmit").addEventListener("click", () => {
       form.submit();
     } else {
       alert("Please log in before sending an email.");
-      window.location.href("/login.html");
+      window.location.replace("/login.html");
     }
   });
 });
